@@ -45,7 +45,7 @@ animating = false;
     randomIndex = int(random(adventurer.length));
     // text(adventurer[randomIndex].name + " " + adventurer[randomIndex].who , 50, 50);
     // adventurer.splice(randomIndex, 1);
-    text(`${adventurer[randomIndex].name} " "
+    text(`${adventurer[randomIndex].name}
     ${adventurer[randomIndex].who}` , 50, 50);
     adventurer.splice(randomIndex, 1);
   } else {
