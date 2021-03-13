@@ -41,6 +41,6 @@ function mousePressed() {
     adventurer.splice(randomIndex, 1);
   } else{
     background(random(200, 255));
-    text("They have all gone their way", 50, 50);
+    text("They have all gone on their way", 50, 50);
   }
 }
