@@ -17,6 +17,7 @@ let adventurer = [{
 }];
 
 let randomIndex;
+let animating = false;
 
 function setup() {
   createCanvas(600, 600);
@@ -28,19 +29,34 @@ function setup() {
 }
 
 function draw() {
+  if(animating == true){
+    ellipse (random(width), random(height), random(50,200))
+    noStroke();
+  }
 
 }
 
-function mousePressed() {
+function randomizer(){
+animating = false;
 
   if (adventurer[0]) {
     // pulls random name and then takes it out
     background(random(200, 255));
     randomIndex = int(random(adventurer.length));
-    text(adventurer[randomIndex].name, 50, 50);
+    // text(adventurer[randomIndex].name + " " + adventurer[randomIndex].who , 50, 50);
+    // adventurer.splice(randomIndex, 1);
+    text(`${adventurer[randomIndex].name} " "
+    ${adventurer[randomIndex].who}` , 50, 50);
     adventurer.splice(randomIndex, 1);
-  } else{
+  } else {
     background(random(200, 255));
     text("They have all gone on their way", 50, 50);
   }
+}
+
+function mousePressed() {
+animating = true;
+setTimeout(randomizer, 2000);
+
+
 }
