@@ -47,7 +47,7 @@ function setup() {
 
 button = createButton('Who are you?');
  button.position(width*0.42, height*0.55);
-   button.style ('background-color', '#e1cef2');
+   button.style ('background-color', ' #f6375a');
 button.mousePressed(buttonPressed);
 button.style ('')
 
