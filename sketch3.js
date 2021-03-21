@@ -45,8 +45,8 @@ function setup() {
   spark[3] = new Spark(50, -175, 1.5,);
   spark[4] = new Spark(-135, 500, .75,);
 
-button = createButton('click me');
- button.position(width*0.45, height*0.55);
+button = createButton('Who are you?');
+ button.position(width*0.42, height*0.55);
    button.style ('background-color', '#e1cef2');
 button.mousePressed(buttonPressed);
 button.style ('')
