@@ -14,7 +14,14 @@ let characterbg = ["Acolyte", "Anthropologist", "Archaeologist", "Charlatan", "C
   "Pirate", "Sage", "Sailor", "Soldier", "Spy", "Urban Bounty Hunter", "Urchin"
 ];
 
-let randomIndex;
+let cl;
+let ra;
+let charabg;
+
+let wrd1;
+let wrd2;
+let button;
+
 
 let spark = [];
 
@@ -27,7 +34,10 @@ function setup() {
   background(0, 0, 0);
   imageMode(CENTER);
   image(frame, 300,300);
-  textSize(24);
+
+  // fill(150)
+  // rect(-190,-310, 250,40)
+ boxes();
 
   spark[0] = new Spark(0, 0);
   spark[1] = new Spark(25, 200, 1.5,);
@@ -35,6 +45,15 @@ function setup() {
   spark[3] = new Spark(50, -175, 1.5,);
   spark[4] = new Spark(-135, 500, .75,);
 
+button = createButton('click me');
+ button.position(width*0.45, height*0.55);
+   button.style ('background-color', '#e1cef2');
+button.mousePressed(buttonPressed);
+button.style ('')
+
+boxes();
+texline1();
+// texline2();
 }
 
 function draw() {
@@ -44,38 +63,52 @@ function draw() {
   spark[2].display();
   spark[3].display();
   spark[4].display();
+// fill(150)
+//   rect(-190,-300, 250,50)
 }
 
-function buttonPressed(){}
+function buttonPressed(){
+  cl = int(random(characlass.length));
+  ra = int(random(race.length));
+  charabg = int(random(characterbg.length));
+  wrd1 = characlass[cl] + " of the " + race[ra] + " race.";
+  wrd2 = characterbg[charabg] + " background.";
 
-function sparks(){
-  fill(255);
+  color1 = random(255)
+   color2 = random(255)
+   color3 = random(255)
+
+texline2();
+}
+
+function boxes(){
+  fill(100);
   noStroke();
-  beginShape();
-  vertex(80,100);
-   quadraticVertex(85, 85, 100, 80);
-    quadraticVertex(85, 75, 80, 60);
-   quadraticVertex(75, 75, 60, 80);
-  quadraticVertex(75, 85, 80,100);
-  endShape();
-
-  beginShape();
-  vertex(180,200);
-   quadraticVertex(185, 185, 200, 180);
-    quadraticVertex(185, 175, 180, 160);
-   quadraticVertex(175, 175, 160, 180);
-  quadraticVertex(175, 185, 180,200);
-  endShape();
-
-  beginShape();
-  vertex(550,160);
-   quadraticVertex(555, 145, 570, 140);
-    quadraticVertex(555, 135, 550, 120);
-   quadraticVertex(545, 135, 530, 140);
-  quadraticVertex(545, 145, 550,10);
-  endShape();
+  rect(width*0.33, height*0.218, 210,40)
+  rect(width*0.33, height*0.712, 210,40)
 }
 
-function randomizer() {
+function texline1(){
+  fill (0)
+  textAlign(CENTER);
+//unchanging text
+text('You see a ...', width*0.5, height*0.2);
+text("You suspect you're of the", width*0.5, height*0.7);
+}
 
+function texline2(){
+   // background(0);
+   // //   imageMode(CENTER);
+   // // image(frame, -95,-95,700,700);
+
+// texline1();
+fill(100)
+  rect(-180,-312, 240,40)
+  rect(-180,40, 240,40)
+
+  fill (color1, color2, color3);
+  textAlign(CENTER);
+//changing text
+text(wrd1, width* - 0.1, height* -0.48 );
+text(wrd2, width* -0.1, height* 0.11 );
 }
