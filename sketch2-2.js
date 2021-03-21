@@ -4,7 +4,7 @@ let adventurer = [{
   who: "The Thrill Seeking Singer"
 }, {
   name: "Ozerin Everlight",
-  who: "The Charming Vagabond"
+  who: "The Charming Drifter"
 }, {
   name: "Asphodel Nettle",
   who: "The Ghostly Protector"
