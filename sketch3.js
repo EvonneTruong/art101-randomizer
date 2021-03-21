@@ -82,7 +82,7 @@ texline2();
 }
 
 function boxes(){
-  fill(100);
+  fill(250);
   noStroke();
   rect(width*0.33, height*0.218, 210,40)
   rect(width*0.33, height*0.712, 210,40)
@@ -102,7 +102,7 @@ function texline2(){
    // // image(frame, -95,-95,700,700);
 
 // texline1();
-fill(100)
+fill(250)
   rect(-180,-312, 240,40)
   rect(-180,40, 240,40)
 
