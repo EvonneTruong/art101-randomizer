@@ -1,27 +1,23 @@
-// You meet an adventurer
-let adventurer = [{
-  name: "Gin-Gin Mule",
-  who: "The Thrill Seeking Singer"
-}, {
-  name: "Ozerin Everlight",
-  who: "The Charming Drifter"
-}, {
-  name: "Asphodel Nettle",
-  who: "The Ghostly Protector"
-}, {
-  name: "Helios Sterling",
-  who: "The Crafty Scholar"
-}, {
-  name: "Ura Azir-Keiran",
-  who: "The Curious Tinkerer"
-}];
+// You look into an ornate mirror
+
+//what dnd class are you
+let class = ["Artificer", "Barbarian", "Bard", "Blood Hunter", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"];
+
+//What dnd race are you picking from; general groups only
+let race = ["Common", "Exotic", "Monstrous", "Unearthed Arcana", "Eberron", "Plane Shift", "Ravnica", "Theros"];
+
+// character backgrounds on
+let characterbg = ["Acolyte", "Anthropologist", "Archaeologist", "Charlatan", "City Watch", "Clan Crafter", "Cloistered Scholar", "Courtier",
+  "Criminal", "Entertainer", "Faceless", "Faction Agent", "Far Traveler", "Folk Hero",
+  "Gladiator", "Guild Artisan", "Guild Merchant", "Haunted One", "House Agent", "Hermit", "Inheritor",
+  "Investigator", "Knight", "Knight og the Order", " Marine", "Mercenary Veteran", "Noble", "Outlander",
+  "Pirate", "Sage", "Sailor", "Soldier", "Spy", "Urban Bounty Hunter", "Urchin"];
 
 let randomIndex;
-let animating = false;
 
 function setup() {
   createCanvas(600, 600);
-  background(200);
+  background(0);
   textSize(32);
 
   text("click to see who", 50, 50);
@@ -29,15 +25,11 @@ function setup() {
 }
 
 function draw() {
-  if(animating == true){
-    ellipse (random(width), random(height), random(50,200))
-    noStroke();
-  }
 
 }
 
-function randomizer(){
-animating = false;
+function randomizer() {
+  animating = false;
 
   if (adventurer[0]) {
     // pulls random name and then takes it out
@@ -46,7 +38,7 @@ animating = false;
     // text(adventurer[randomIndex].name + " " + adventurer[randomIndex].who , 50, 50);
     // adventurer.splice(randomIndex, 1);
     text(`${adventurer[randomIndex].name}
-    ${adventurer[randomIndex].who}` , 50, 50);
+    ${adventurer[randomIndex].who}`, 50, 50);
     adventurer.splice(randomIndex, 1);
   } else {
     background(random(200, 255));
@@ -55,8 +47,8 @@ animating = false;
 }
 
 function mousePressed() {
-animating = true;
-setTimeout(randomizer, 2000);
+  animating = true;
+  setTimeout(randomizer, 2000);
 
 
 }
