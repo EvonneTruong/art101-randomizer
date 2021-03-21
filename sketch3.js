@@ -71,7 +71,7 @@ function buttonPressed(){
   cl = int(random(characlass.length));
   ra = int(random(race.length));
   charabg = int(random(characterbg.length));
-  wrd1 = characlass[cl] + " of the " + race[ra] + " race.";
+  wrd1 = characlass[cl] + " of the " + race[ra] + " races.";
   wrd2 = characterbg[charabg] + " background.";
 
   color1 = random(255)

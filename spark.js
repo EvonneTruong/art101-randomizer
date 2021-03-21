@@ -11,7 +11,7 @@ class Spark {
   translate (this.xPos, this.yPos)
 
     //create the image
-    fill(55,177,246);
+    fill(246,55,90);
     noStroke();
     beginShape();
     vertex(80,100);
